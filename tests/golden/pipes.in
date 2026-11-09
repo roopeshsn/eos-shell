@@ -1,0 +1,13 @@
+show clock | count
+show clock | include [0-9]{2}:[0-9]{2}:[0-9]{2} | count
+show clock | exclude [0-9]
+show clock | grep -v [0-9] | count
+show clock | begin [0-9] | include nomatchxyz | count
+show clock | inc [0-9] | exc nomatch | count
+show clock | bogus
+show clock |
+show clock | include
+show clock | include [
+show clock | count extra
+foo | count
+quit

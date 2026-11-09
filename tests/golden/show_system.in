@@ -1,0 +1,13 @@
+show users | include Line
+show environment | include "Power source" | count
+show interfaces counters | include Port
+show ip route summary | include "Route Source"
+show ip route summary | include Total | count
+show ipv6 route summary | include Total | count
+show logging 0
+show logging 5000
+show logging abc
+show tech-support | include "------------- show"
+show tech-support extra
+show history | include "show users"
+quit

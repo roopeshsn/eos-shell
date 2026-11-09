@@ -1,0 +1,29 @@
+sw1>show hostname
+Hostname: sw1
+sw1>show interfaces nope
+% Interface not found: nope
+sw1>show ip interface brief | include Interface
+Interface      IP Address             Status     Protocol   MTU
+sw1>show interfaces status | include Port
+Port           Status       MTU
+sw1>show version | include Hostname
+Hostname:         sw1
+sw1>show version | include Architecture | count
+Number of lines in output: 1
+sw1>show ip
+% Incomplete command
+sw1>show ip route | include Codes
+Codes: C - connected, S - static (via gateway)
+sw1>show ipv6 route | include Codes
+Codes: C - connected, S - static (via gateway)
+sw1>show arp | include Address
+Address            Hardware Addr    Interface
+sw1>show processes | include PID | count
+Number of lines in output: 1
+sw1>show ip route nonsense
+% Invalid address 'nonsense'
+sw1>show ip route 999.1.1.1
+% Invalid address '999.1.1.1'
+sw1>show ipv6 route 1.2.3.4
+% Invalid address '1.2.3.4'
+sw1>quit

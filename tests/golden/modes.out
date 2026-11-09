@@ -1,0 +1,15 @@
+sw1>sho
+% Incomplete command
+sw1>show
+% Incomplete command
+sw1>foo
+% Invalid input (at token 1: 'foo')
+sw1>sh foo
+% Invalid input (at token 2: 'foo')
+sw1>s
+% Incomplete command
+sw1>en
+sw1#conf t
+sw1(config)#exit
+sw1#disable
+sw1>exit

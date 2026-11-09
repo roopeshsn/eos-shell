@@ -1,0 +1,15 @@
+show hostname
+show interfaces nope
+show ip interface brief | include Interface
+show interfaces status | include Port
+show version | include Hostname
+show version | include Architecture | count
+show ip
+show ip route | include Codes
+show ipv6 route | include Codes
+show arp | include Address
+show processes | include PID | count
+show ip route nonsense
+show ip route 999.1.1.1
+show ipv6 route 1.2.3.4
+quit

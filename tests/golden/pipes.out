@@ -1,0 +1,24 @@
+sw1>show clock | count
+Number of lines in output: 1
+sw1>show clock | include [0-9]{2}:[0-9]{2}:[0-9]{2} | count
+Number of lines in output: 1
+sw1>show clock | exclude [0-9]
+sw1>show clock | grep -v [0-9] | count
+Number of lines in output: 0
+sw1>show clock | begin [0-9] | include nomatchxyz | count
+Number of lines in output: 0
+sw1>show clock | inc [0-9] | exc nomatch | count
+Number of lines in output: 1
+sw1>show clock | bogus
+% Invalid input (after '|': 'bogus')
+sw1>show clock |
+% Incomplete command
+sw1>show clock | include
+% Incomplete command
+sw1>show clock | include [
+% Invalid regular expression: '['
+sw1>show clock | count extra
+% Invalid input (after '|': 'extra')
+sw1>foo | count
+% Invalid input (at token 1: 'foo')
+sw1>quit

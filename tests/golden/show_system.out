@@ -1,0 +1,39 @@
+sw1>show users | include Line
+   Line         User             Host                 Idle       Login time
+sw1>show environment | include "Power source" | count
+Number of lines in output: 1
+sw1>show interfaces counters | include Port
+Port                   InOctets       InPkts   InErrors        OutOctets      OutPkts  OutErrors
+sw1>show ip route summary | include "Route Source"
+Route Source         Number Of Routes
+sw1>show ip route summary | include Total | count
+Number of lines in output: 1
+sw1>show ipv6 route summary | include Total | count
+Number of lines in output: 1
+sw1>show logging 0
+% Invalid count '0' (use 1-1000)
+sw1>show logging 5000
+% Invalid count '5000' (use 1-1000)
+sw1>show logging abc
+% Invalid count 'abc' (use 1-1000)
+sw1>show tech-support | include "------------- show"
+------------- show clock -------------
+------------- show version -------------
+------------- show environment -------------
+------------- show users -------------
+------------- show interfaces status -------------
+------------- show interfaces -------------
+------------- show interfaces counters -------------
+------------- show ip interface brief -------------
+------------- show ip route -------------
+------------- show ip route summary -------------
+------------- show ipv6 route -------------
+------------- show arp -------------
+------------- show processes top -------------
+------------- show logging 100 -------------
+sw1>show tech-support extra
+% Invalid input (at token 3: 'extra')
+sw1>show history | include "show users"
+   1  show users | include Line
+  12  show history | include "show users"
+sw1>quit
